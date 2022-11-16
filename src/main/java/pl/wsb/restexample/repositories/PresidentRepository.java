@@ -27,25 +27,25 @@ public class PresidentRepository {
 
     public Optional<President> get(Long id) {
         return presidents.stream()
-                .filter(song -> song.getId().equals(id))
+                .filter(president -> president.getId().equals(id))
                 .findFirst();
     }
 
-    public President create(PresidentDto songDto) {
-        President newSong = new President(currentId++, songDto);
-        presidents.add(newSong);
-        return newSong;
+    public President create(PresidentDto presidentDto) {
+        President newPresident = new President(currentId++, presidentDto);
+        presidents.add(newPresident);
+        return newPresident;
     }
 
-    public President update(President song, PresidentDto songDto){
-        song.setName(songDto.getName());
-        song.setParty(songDto.getParty());
-        song.setBorn(songDto.getBorn());
-        return song;
+    public President update(President president, PresidentDto presidentDto){
+        president.setName(presidentDto.getName());
+        president.setParty(presidentDto.getParty());
+        president.setBorn(presidentDto.getBorn());
+        return president;
     }
 
-    public void delete(President song) {
-        presidents.remove(song);
+    public void delete(President president) {
+        presidents.remove(president);
     }
 
 }
