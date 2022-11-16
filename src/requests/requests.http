@@ -1,0 +1,27 @@
+GET http://localhost:8080/presidents
+
+###
+GET http://localhost:8080/presidents/3
+
+###
+POST http://localhost:8080/presidents
+Content-Type: application/json
+
+{
+  "name": "Bill Clinton",
+  "party": "demokrata",
+  "born": "1946"
+}
+
+###
+PUT  http://localhost:8080/presidents/1
+Content-Type: application/json
+
+{
+  "name": "Ronald Reagan",
+  "party": "republikanin",
+  "born": "1911"
+}
+
+###
+DELETE  http://localhost:8080/presidents/4
